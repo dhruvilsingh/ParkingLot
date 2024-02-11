@@ -1,61 +1,61 @@
-Clone the project compile and run.
+Clone the project compile and run.<br><br>
 
-Commands - 
-create_parking_lot capacity
+# Commands -
+- create_parking_lot capacity <br>
 (Creates a parking lot with entered capacity)
 
-park regNo color
+- park regNo color <br>
 (Parks the car at nearest slot)
 
-leave slotNo
+- leave slotNo <br>
 (Exits the car from entered slot)
 
-status
+- status <br>
 (Displays all the cars parked)
 
-registration_numbers_for_cars_with_color color
+- registration_numbers_for_cars_with_color color <br>
 (Displays the registration numbers of all cars of enetered color)
 
-slot_number_for_car_with_registration_number regNo
+- slot_number_for_car_with_registration_number regNo <br>
 (Displays the slot number of the car with entered registration number)
 
-slot_numbers_for_cars_with_color color
+- slot_numbers_for_cars_with_color color <br>
 (Displays all slot numbers with cars of entered color)
 
-exit
+- exit <br>
 (exits)
 
-
-Example -
-$ create_parking_lot 6 
-Created a parking lot with 6 slots 
-$ park KA-01-HH-1234 White 
-Allocated slot number: 1 
-$ park KA-01-HH-9999 White 
-Allocated slot number: 2 
-$ park KA-01-BB-0001 Black 
-Allocated slot number: 3 
-$ park KA-01-HH-7777 Red 
-Allocated slot number: 4 
-$ park KA-01-HH-2701 Blue 
-Allocated slot number: 5 
-$ park KA-01-HH-3141 Black 
-Allocated slot number: 6 
-$ leave 4 
-Slot number 4 is free 
-$ status 
-Slot No. Registration No Color 
-1 KA-01-HH-1234 White 
-2 KA-01-HH-9999 White
-3 KA-01-BB-0001 Black 
-5 KA-01-HH-2701 Blue 
-6 KA-01-HH-3141 Black 
-$ park KA-01-P-333 White 
-Allocated slot number: 4 
-$ park DL-12-AA-9999 White 
-Sorry, parking lot is full 
-$ registration_numbers_for_cars_with_color White 
-KA-01-HH-1234
-KA-01-HH-9999
-KA-01-P-333 
-$ exit
+<br><br>
+# Example -
+$ create_parking_lot 6 <br>
+Created a parking lot with 6 slots <br>
+$ park KA-01-HH-1234 White <br>
+Allocated slot number: 1 <br>
+$ park KA-01-HH-9999 White <br>
+Allocated slot number: 2 <br>
+$ park KA-01-BB-0001 Black <br>
+Allocated slot number: 3 <br>
+$ park KA-01-HH-7777 Red <br>
+Allocated slot number: 4 <br>
+$ park KA-01-HH-2701 Blue <br>
+Allocated slot number: 5 <br>
+$ park KA-01-HH-3141 Black <br>
+Allocated slot number: 6 <br>
+$ leave 4 <br>
+Slot number 4 is free <br>
+$ status <br>
+Slot No. Registration No Color <br>
+1 KA-01-HH-1234 White <br>
+2 KA-01-HH-9999 White <br>
+3 KA-01-BB-0001 Black <br>
+5 KA-01-HH-2701 Blue <br>
+6 KA-01-HH-3141 Black <br>
+$ park KA-01-P-333 White <br>
+Allocated slot number: 4 <br>
+$ park DL-12-AA-9999 White <br>
+Sorry, parking lot is full <br>
+$ registration_numbers_for_cars_with_color White <br>
+KA-01-HH-1234 <br>
+KA-01-HH-9999 <br>
+KA-01-P-333 <br>
+$ exit <br>
