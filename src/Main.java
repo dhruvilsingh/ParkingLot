@@ -13,23 +13,25 @@ public class Main {
         while (true) {
             System.out.print("Enter command - ");
             String input = scanner.nextLine();
-            String[] command = input.split(" ");
+            input = input.trim();
+            String[] command = input.split("\\s+");
 
             switch (command[0]) {
                 case "create_parking_lot":
-                    if(command.length != 2){
-                        System.out.println("Invalid arguments");
+                    if(!validateCreateParking(ticketingService, command))
                         break;
-                    }
                     int capacity;
                     try{
                         capacity = Integer.parseInt(command[1]);
+                        if(capacity < 1){
+                            System.out.println("Enter a valid capacity");
+                            break;
+                        }
                     }catch (NumberFormatException e){
                         System.out.println("Enter a valid capacity");
                         break;
                     }
                     ticketingService = new TicketingService(capacity);
-                    System.out.println("Created a parking lot with " + capacity + " slots");
                     break;
                 case "park":
                     if(!validate(ticketingService,command, 3))
@@ -105,6 +107,18 @@ public class Main {
             return false;
         }
         if(command.length != noOfArguments){
+            System.out.println("Invalid arguments");
+            return false;
+        }
+        return true;
+    }
+
+    private static boolean validateCreateParking(TicketingService ticketingService, String[] command){
+        if(ticketingService != null){
+            System.out.println("Parking lot already exist");
+            return false;
+        }
+        if(command.length != 2){
             System.out.println("Invalid arguments");
             return false;
         }

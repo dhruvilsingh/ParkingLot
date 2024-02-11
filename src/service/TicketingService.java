@@ -21,6 +21,7 @@ public class TicketingService {
         for(ParkingSlot ps : parkingSlotList){
             parkingSlotPriorityQueue.add(ps);
         }
+        System.out.println("Created a parking lot with " + capacity + " slots");
     }
 
     public void parkCar(String regNo, String color){
@@ -37,6 +38,10 @@ public class TicketingService {
     }
 
     public void exitCar(int slotNo){
+        if(slotNo < 1  || slotNo > parkingRepository.getCapacity()){
+            System.out.println("Enter a valid slot number");
+            return ;
+        }
         if(!parkingRepository.getParkingSlotList().get(slotNo-1).getOccupiedStatus()){
             System.out.println("The slot is already empty");
             return;

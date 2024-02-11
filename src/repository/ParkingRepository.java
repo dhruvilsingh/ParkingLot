@@ -36,4 +36,8 @@ public class ParkingRepository {
     public List<ParkingSlot> getParkingSlotList() {
         return parkingLot.getParkingSlotList();
     }
+
+    public int getCapacity(){
+        return parkingLot.getCapacity();
+    }
 }
